@@ -1,0 +1,6 @@
+<!-- <p *ngFor="let todoEach of todoItem">{{todoEach.id}} , {{todoEach.text}} , {{todoEach.day}} , {{todoEach.reminder}}</p> -->
+
+<div class="todo" [ngClass]="{reminder: todo.reminder}" (click)="onMarkAsRead(todo, $event)">
+    <h3>{{todo.text}} <fa-icon (click)="onDelete(todo)" [ngStyle]="{'color': 'red'}" [icon]=faTimes></fa-icon></h3>
+    <h2>{{todo.day}}</h2>
+</div>
